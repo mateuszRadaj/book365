@@ -1,11 +1,4 @@
-# MyLibraryApp
-Dokumentacja aplikacji MyLibraryApp
-
-
-Projekt tworzyła grupa "Obóz Pracy Natalii bez myślnika" w składzie:
-Natalia Chamier Gliszczyńska
-Roger Alkiewicz
-
+book365 - internetowa biblioteka
 
 Spis Treści:
 1. Konfiguracja przed uruchomieniem
@@ -35,40 +28,8 @@ Aby łatwo to sprawdzić w CMD wystarczy wpisać komendę "dotnet sdk check"
     - Opracowywanie zawartośći dla platformy ASP.NET Core
     - Programowanie aplikacji klasycznych dla platformy .NET
     - Magazynowanie i przetwarzanie danych
-  
-  
-2. Role użytkownika: 
-Aplikacja posiada dwie 3 dla użytkowników. Są to "Admin", "Member" i użytkownik niezalogowany. 
-- Niezalogowany użytkownik ma dostęp do str. głównej, zakładki Privacy i formularzy logowania i rejestracji
-- Member posiada podstawowe funkcje pozwalające na korzystanie z aplikacji
-- Admin to rola administratora. Ma on uprawnienia do zarządzania zasobami biblioteki
 
-
-3. Funkcjonalności ogólne:
-- Aplikacja łączy się z bazą danych MySQL, na której wykonuje podstawowe polecenia CRUD
-- Aplikacja pozwala na rejestrowanie i logowanie się użytkowników
-- Aplikacja rozpoznaje role użytkowników (Admin, Member, niezalogowany) poprzez claimy (żadania) zawarte w ciasteczkach
-- Aplikacja ogranicza dostęp do stron, do których dana rola nie powinna mieć dostępu za pomocą mechanizmu autentykacji i tzw. "wytycznym"
-- Aplikacja stosuje metodę hashowania haseł w celu zwiększenia bezpieczeństwa danych użytkowników
-
-
-4. Funkcjonalności Member:
-- Dostęp do wszystkiego, co użytkownik niezalogowany
-- Dostęp do zbiorów biblioteki
-- Dostęp do informacji o koncie
-- Wypożyczenie książek
-- Zwrotu książek
-
-
-5. Funkcjonalności Admin:
-- Dostęp do wszystkiego, co użytkownik niezalogowany i Member
-- Dodawanie nowych książek do zbioru
-- Edytowanie książek
-- Usuwanie książek
-- Rejestracja nowego konta administratora (Zakładka Account -> Register Admin)
-
-
-6. Dane logowania kont początkowych:
+Dane logowania kont początkowych:
 - Konto Admin:
   - Email: admin@mylibrary.com
   - Hasło: admin
