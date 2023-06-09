@@ -1,0 +1,39 @@
+﻿@page
+@model MyLibraryApp.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "login page";
+}
+@{
+    if (TempData["Fail"] != null)
+    {
+        <h5>@TempData["Fail"]</h5>
+    }
+    }
+    <div class="container rounded mt-5 w-50 login-container p-3">
+        <h2>Logowanie</h2>
+        <form method="post">
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <div class="ps-5 form-group row">
+                <div class="col-3 text-end">
+                <label asp-for="User.Email" class="pt-2">login</label>
+                </div>
+                <div class="col-5">
+                    <input type="text" asp-for="User.Email" class="form-control" />
+                </div>
+            </div>
+            <br />
+            <div class="ps-5 form-group row">
+                <div class="col-3 text-end">
+                    <label asp-for="User.Password" class="pt-2">hasło</label>
+                </div>
+                <div class="col-5">
+                    <input type="password" asp-for="User.Password" class="form-control" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group row text-center">
+                <input type="submit" class="btn rounded login-btn w-50 mx-auto" value="Zaloguj się" />
+                <a class="mx-auto pt-2" href="#">Zapomniałem hasła</a>
+            </div>
+        </form>
+    </div>

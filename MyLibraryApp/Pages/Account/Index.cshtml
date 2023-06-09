@@ -1,0 +1,32 @@
+﻿@page
+@model MyLibraryApp.Pages.Account.IndexModel
+@{
+
+    if (TempData["Success"] != null)
+    {
+        <h5>@TempData["Success"]</h5>
+    }
+}
+
+<h1>Account Index Page</h1>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <a asp-page="/Account/Info" class="btn btn-primary">
+                Account Info
+            </a>
+        </div>
+        <br />
+        <br />
+        <div class="col-12">
+            <a asp-page="/Books/Rented" class="btn btn-primary">
+                Rented Books
+            </a>
+        </div>
+        <br />
+        <br />
+        <div class="col-12">
+            <partial name="_AdminRegistrationPartial" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@page
+@model MyLibraryApp.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "register page";
+}
+@{
+
+    if (TempData["Success"] != null)
+    {
+        <h5>@TempData["Success"]</h5>
+    }
+}
+<div class="container rounded mt-5 w-50 register-container p-3">
+    <h2>Rejectracja</h2> <br />
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="form-group row text-end">
+            <div class="col-3">
+                <label asp-for="User.Name">imię</label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="User.Name" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group row text-end">
+            <div class="col-3">
+                <label asp-for="User.Surname" class="pt-2">naziwsko</label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="User.Surname" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group row text-end">
+            <div class="col-3">
+                <label asp-for="User.Email" class="pt-2">email</label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="User.Email" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group row text-end">
+            <div class="col-3">
+                <label asp-for="User.Password" class="pt-2">hasło</label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="User.Password" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group row text-end">
+            <div class="col-3">
+                <label asp-for="User.Password" class="pt-2">powtórz hasło</label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="User.Password" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group row">
+            <input type="submit" class="btn rounded register-btn w-50 mx-auto" value="Zarejestruj się" />
+        </div>
+    </form>
+</div>

@@ -1,0 +1,77 @@
+﻿@page
+@model MyLibraryApp.Pages.Books.IndexModel
+@{
+    if (TempData["Success"] != null)
+    {
+        <h5>@TempData["Success"]</h5>
+    }
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-12">
+            <partial name="_AddBookPartial" />
+        </div>
+    </div>
+</div>
+
+<table class="table table-borderless" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    @foreach (var obj in Model.Books)
+    {
+        if (obj.MemberId != 1)
+        {
+            continue;
+        }
+
+
+        <tbody>
+            <tr>
+                <td>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/Ifbon9lJ4zA/maxresdefault.jpg" alt="@obj.Author" style="">
+                        <h1 class="pt-3">@obj.Title</h1>
+                        <p class="price">35 zł</p>
+                        <p>
+                            <a asp-page="Rent" asp-route-id="@obj.Id" class="btn books-btn mx-4">
+                                Wypożycz
+                            </a>
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/Ifbon9lJ4zA/maxresdefault.jpg" alt="@obj.Author" style="">
+                        <h1 class="pt-3">@obj.Title</h1>
+                        <p class="price">20 zł</p>
+                        <p>
+                            <a asp-page="Rent" asp-route-id="@obj.Id" class="btn books-btn mx-4">
+                                Wypożycz
+                            </a>
+                        </p>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/Ifbon9lJ4zA/maxresdefault.jpg" alt="@obj.Author" style="">
+                        <h1 class="pt-3">@obj.Title</h1>
+                        <p class="price">40 zł</p>
+                        <p>
+                            <a asp-page="Rent" asp-route-id="@obj.Id" class="btn books-btn mx-4">
+                                Wypożycz
+                            </a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>

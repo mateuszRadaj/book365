@@ -1,0 +1,27 @@
+﻿@page
+@model MyLibraryApp.Pages.Books.RentModel
+@{
+}
+
+<form method="post">
+    <input hidden asp-for="Book.Id" />  
+    <input hidden asp-for="Book.Title" />
+    <input hidden asp-for="Book.Author" />
+    <div class="border p-3 mt-4 text-center">
+        <h2 class="custom-text"> Wypożycz książkę</h2>
+        <hr />
+        <div class="row pb-2 text-center">
+            <div class="col-6 py-3">
+                <label asp-for="@Model.Book.Title">Tytuł</label><br /><br />
+                <input asp-for="@Model.Book.Title" disabled class="form-control" /> <!-- pokazuje wartosc z pola title na stronie -->
+            </div>
+            <div class="col-6 py-3">
+                <label asp-for="@Model.Book.Author">Autor</label><br /><br />
+                <input asp-for="@Model.Book.Author" disabled class="form-control" /> <!-- disabled wyłącza input na polu -->
+            </div>    
+        </div>
+        
+        <button type="submit" class="btn pay-btn me-2"> Wypożycz </button>
+        <a asp-page="Index" class="btn btn-dark"> Wróć </a>
+    </div>
+</form>

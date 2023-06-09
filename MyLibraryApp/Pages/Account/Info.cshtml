@@ -1,0 +1,44 @@
+﻿@page
+@model MyLibraryApp.Pages.Account.InfoModel
+@{
+}
+<h1 class="py-4">Informacje o twoim koncie:</h1>
+
+
+<div class="container w-50">
+    <table class="table table-bordered table-striped">
+
+        <tbody>
+            <tr>
+                <td class="text-center" width="20%">Imię</td>
+                <td class="text-center" width="38%">@Model.User.Name</td>
+                <td class="text-center" width="38%"><button type="button" class="btn btn-light">Zmięń imie</button></td>
+            </tr>
+            <tr>
+                <td class="text-center" width="20%">Nazwisko</td>
+                <td class="text-center" width="38%">@Model.User.Surname</td>
+                <td class="text-center" width="38%"><button type="button" class="btn btn-light">Zmień nazwisko</button></td>
+            </tr>
+            <tr>
+                <td class="text-center" width="20%">Email</td>
+                <td class="text-center" width="38%">@Model.User.Email</td>
+                <td class="text-center" width="38%"><span class="text-danger">Nie można zmieniać emaila</span></td>
+            </tr>
+            <tr>
+                <td class="text-center" width="20%">Typ konta</td>
+                @{
+                    if (Model.User.RoleId == 2)
+                    {
+                        <td class="text-center" width="38%">Admin</td>
+                    }
+                    else if (Model.User.RoleId == 3)
+                    {
+                        <td class="text-center" width="38%">Member</td>
+                    }
+                }
+                <td class="text-center" width="38%"><span class="text-info">Poproś administratora o zmiane!</span></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

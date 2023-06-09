@@ -1,0 +1,103 @@
+html {
+  font-size: 14px;
+  font-family: 'Poppins';
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.menu {
+    background-color: #996644;
+    height: min-content;
+}
+
+.search-btn {
+    background-color: #334E4F;
+    color: white;
+}
+
+.login-container {
+    background-color: #D9D9D9;
+}
+
+.login-btn {
+    background-color: #334E4F;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #334E4F;
+}
+
+.register-container {
+    background-color: #D9D9D9;
+}
+
+.register-btn {
+    background-color: #334E4F;
+    color: white;
+}
+
+.row-css {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pay-btn {
+    background-color: #334E4F;
+    color: white;
+}
+
+.card {
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #996644;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+
+.card button:hover {
+   opacity: 0.7;
+}
+
+.books-btn {
+    border-radius: 8px;
+    background-color: #334E4F;
+    color: white;
+}
+
+.custom-text {
+    color: #334E4F;
+}
